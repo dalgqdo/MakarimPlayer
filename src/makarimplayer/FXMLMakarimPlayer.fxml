@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="makarimplayer.FXMLMakarimPlayerController">
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="200.0" />
+            <Slider fx:id="slidervideo" StackPane.alignment="BOTTOM_CENTER" />
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <HBox fx:id="button" alignment="CENTER" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="OpenFile" onAction="#Openvideo" prefHeight="25.0" prefWidth="24.0" stylesheets="@style.css" text=" ">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../gambar/folder-open-icon-62379.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="Slowest" onAction="#Slowestvideo" style="-fx-background-color: grey;" text="&lt;&lt;&lt;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></JFXButton>
+            <JFXButton fx:id="Slower" onAction="#Slowervideo" style="-fx-background-color: silver;" text="&lt;&lt;">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin></JFXButton>
+            <JFXButton fx:id="Pause" onAction="#Pausevideo" prefHeight="55.0" prefWidth="53.0" text=" " textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../gambar/pause-button-png-pause-button-transparent-google-search-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="Play" onAction="#Playvideo" prefHeight="20.0" prefWidth="20.0" text=" " textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../gambar/play-button-icon-png.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="Stop" onAction="#Stopvideo" prefHeight="75.0" prefWidth="28.0" text=" " textFill="WHITE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.5" fitWidth="32.5">
+                     <image>
+                        <Image url="@../gambar/Stop.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton fx:id="faster" onAction="#fastervideo" style="-fx-background-color: silver;" text="&gt;&gt;" />
+            <JFXButton fx:id="Fastest" onAction="#Fastestvideo" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: grey;" text="&gt;&gt;&gt;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></JFXButton>
+            <JFXButton fx:id="fullscreen" onAction="#fullscreenvideo" prefHeight="25.0" prefWidth="50.0" text="exit">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></JFXButton>
+            <Slider fx:id="slider" prefHeight="14.0" prefWidth="67.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Slider>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="28.0" prefWidth="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar opacity="0.77" prefHeight="25.0" prefWidth="613.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#Openvideo" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#fullscreenvideo" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
