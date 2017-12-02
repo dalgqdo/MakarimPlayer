@@ -1,5 +1,5 @@
 # MakarimPlayer
-![alt text](1.PNG)
+![alt text](tampilan awal.PNG)
 
 
-![alt text](2.PNG)
+![alt text](tampilan awal dua.PNG)
